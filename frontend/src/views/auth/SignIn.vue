@@ -1,7 +1,7 @@
 <template>
     <div class="bg-gray-100 p-6 min-h-screen">
         <div class="flex mt-24">
-            <span class="mx-auto text-gray-500"> Sign in to your account</span>
+            <span class="mx-auto text-gray-500 mb-4"> Sign in to your account</span>
         </div>
         <div class=" w-full md:w-2/12 mx-auto mt-4 text-xs">
             <form @submit.prevent="handleSubmit">

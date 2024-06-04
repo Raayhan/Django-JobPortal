@@ -1,7 +1,7 @@
 <template>
     <div class="bg-gray-100 p-6 min-h-screen">
         <div class="flex mt-24">
-            <span class="mx-auto text-gray-500"> Sign up for an account</span>
+            <span class="mx-auto text-gray-500 mb-4"> Sign up for an account</span>
         </div>
         <div class=" w-full md:w-2/12 mx-auto mt-4 text-xs">
             <form @submit.prevent="handleSubmit">
@@ -14,7 +14,7 @@
                     v-model="formData.password2" />
                 <button type="submit"
                     class="bg-indigo-700 mb-4 text-white flex justify-center w-full rounded p-2 text-xs">Sign
-                    in</button>
+                    up</button>
             </form>
             <span>Already have an account? </span>
             <router-link class="text-blue-700 font-bold hover:underline" to="/sign-in">Sign in</router-link> to create
