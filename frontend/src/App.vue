@@ -39,7 +39,7 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <router-link to="/"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Jobs</router-link>
-              <router-link to="/applications"
+              <router-link to="/applications" v-if="$store.state.isAuthenticated"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Applications</router-link>
 
             </div>
@@ -82,15 +82,21 @@
 
 
               <div v-if="isOpen"
-                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                class="absolute right-0 z-10 mt-6 w-48 duration-300 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                 role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                  id="user-menu-item-0">Profile</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                  id="user-menu-item-1">Settings</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                  id="user-menu-item-2">Sign out</a>
+                <ul>
+                  <li class="hover:bg-indigo-100"><a href="#" class="block px-4 py-2 text-sm text-gray-700"
+                      role="menuitem" tabindex="-1" id="user-menu-item-0">Profile</a></li>
+                  <li class="hover:bg-indigo-100"> <a href="#" class="block px-4 py-2 text-sm text-gray-700"
+                      role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a></li>
+                  <li class="hover:bg-indigo-100"> <button @click="logout()"
+                      class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                      id="user-menu-item-2">Sign out</button></li>
+                </ul>
+
+
+
               </div>
             </template>
 
@@ -113,11 +119,35 @@
   <router-view />
 </template>
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
       isOpen: false,
       isOpenMobile: false,
+    }
+  },
+  beforeCreate() {
+    this.$store.commit('initializeStore')
+    const token = this.$store.state.token
+    if (token) {
+      axios.defaults.headers.common['Authorization'] = "Token" + token
+    }
+    else {
+      axios.defaults.headers.common['Authorization'] = ""
+    }
+  },
+  methods: {
+    logout() {
+      axios.defaults.headers.common["Authorization"] = ""
+
+      localStorage.removeItem("token")
+      localStorage.removeItem("username")
+      localStorage.removeItem("userid")
+
+      this.$store.commit('removeToken')
+      this.$router.push('/sign-in')
+
     }
   }
 }

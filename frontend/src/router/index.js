@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Applications from '@/views/Applications.vue'
 import SignIn from '@/views/auth/SignIn.vue'
 import SignUp from '@/views/auth/SignUp.vue'
+import store from '../store'
 
 const routes = [
   {
@@ -13,7 +14,10 @@ const routes = [
   {
     path: '/applications',
     name: 'applications',
-    component: Applications
+    component: Applications,
+     meta: {
+      requireLogin:true
+    }
    
   },
   {
@@ -33,4 +37,12 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requireLogin) && !store.state.isAuthenticated) {
+    next({ name: 'SignIn', query: { to: to.path } });
+  }
+  else {
+    next()
+  }
+})
 export default router
