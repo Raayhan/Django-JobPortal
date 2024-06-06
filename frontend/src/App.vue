@@ -61,7 +61,7 @@
                   id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">Open user menu</span>
-                  {{ currentUser.first_name }} {{ currentUser.last_name }}
+                  {{ currentUser ? currentUser.first_name + ' ' + currentUser.last_name : 'Loading...' }}
                   <span v-if="!isOpen">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                       stroke="currentColor" class="size-4 ml-1">
@@ -130,7 +130,7 @@ export default {
     this.$store.commit('initializeStore')
     const token = this.$store.state.token
     if (token) {
-      axios.defaults.headers.common['Authorization'] = "Token " + token
+      axios.defaults.headers.common["Authorization"] = `Token ${token}`
     }
     else {
       axios.defaults.headers.common['Authorization'] = ""
