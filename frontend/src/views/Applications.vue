@@ -1,9 +1,11 @@
 <template>
   <div class="about">
-    <h1 class="bg-gray-500 text-white">This is an about page</h1>
+    <h1 class="text-3xl bg-indigo-200">This is application page</h1>
+    <p v-if="currentUser">Hello, {{ currentUser.username }}!</p>
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'applications',
@@ -11,6 +13,14 @@ export default {
     
     document.title = 'Applications | DIJobs';
   },
+  computed: {
+    ...mapGetters(['currentUser']),
+  },
+  created() {
+    if (!this.currentUser) {
+      this.$store.dispatch('fetchUser');
+    }
+  }
 
 }
 </script>

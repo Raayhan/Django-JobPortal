@@ -61,7 +61,7 @@
                   id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">Open user menu</span>
-                  Rayhan Ahmed
+                  My Account
                   <span v-if="!isOpen">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                       stroke="currentColor" class="size-4 ml-1">
@@ -88,8 +88,6 @@
                 <ul>
                   <li class="hover:bg-indigo-100"><a href="#" class="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem" tabindex="-1" id="user-menu-item-0">Profile</a></li>
-                  <li class="hover:bg-indigo-100"> <a href="#" class="block px-4 py-2 text-sm text-gray-700"
-                      role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a></li>
                   <li class="hover:bg-indigo-100"> <button @click="logout()"
                       class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                       id="user-menu-item-2">Sign out</button></li>
@@ -139,12 +137,13 @@ export default {
   },
   methods: {
     logout() {
+
       axios.defaults.headers.common["Authorization"] = ""
 
       localStorage.removeItem("token")
       localStorage.removeItem("username")
       localStorage.removeItem("userid")
-
+      this.isOpen = false
       this.$store.commit('removeToken')
       this.$router.push('/sign-in')
 

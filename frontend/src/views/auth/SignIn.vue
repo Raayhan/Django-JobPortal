@@ -1,9 +1,9 @@
 <template>
     <div class="bg-gray-100 p-6 min-h-screen">
         <div class="flex mt-24">
-            <span class="mx-auto text-gray-500 mb-4"> Sign in to your account</span>
+            <span class="mx-auto text-gray-500 mb-4 text-2xl"> Sign in to your account</span>
         </div>
-        <div class=" w-full md:w-2/12 mx-auto mt-4 text-xs">
+        <div class=" w-full md:w-3/12 mx-auto mt-4">
             <form @submit.prevent="handleSubmit">
                 <InputField id="username" label="Username" type="text" placeholder="Enter Username"
                     v-model="form.username" />
@@ -17,7 +17,7 @@
 
                 </div>
                 <button type="submit" :class="{ 'bg-indigo-500 animate-pulse': isSubmitting, 'bg-indigo-700': !isSubmitting }"
-                    :disabled="isSubmitting" class="mb-4 text-white flex justify-center w-full rounded p-2 text-xs">Sign
+                    :disabled="isSubmitting" class="mb-4 text-white flex justify-center w-full rounded p-3 mt-4">Sign
                     in</button>
             </form>
             <span>Don't have an account? </span>
@@ -61,31 +61,27 @@ export default {
                 const formData = {
                     username: this.form.username,
                     password: this.form.password
+                };
+                try {
+                    const response = await axios.post("/api/v1/token/login", formData);
+                    const token = response.data.auth_token;
+                    this.$store.commit('setToken', token);
+                    localStorage.setItem("token", token);
+                    await this.$store.dispatch('fetchUser');
+                    const toPath = this.$route.query.to || '/applications';
+                    this.$router.push(toPath);
+                } catch (error) {
+                    if (error.response) {
+                        for (const property in error.response.data) {
+                            this.form.errors.push(`${error.response.data[property]}`);
+                        }
+                    } else {
+                        this.form.errors.push('Something went wrong. Please try again later.');
+                        console.log(JSON.stringify(error));
+                    }
+                } finally {
+                    this.isSubmitting = false;
                 }
-                await axios
-                    .post("api/v1/token/login", formData)
-                    .then(response => {
-                        const token = response.data.auth_token
-                        this.$store.commit('setToken', token)
-                        axios.defaults.headers.common["Authorization"] = "Token" + token
-                        localStorage.setItem("token", token)
-                        const toPath = this.$route.query.to || '/applications'
-                        this.$router.push(toPath)
-                    })
-                    .catch(error => {
-                        if (error.response) {
-                            for (const property in error.response.data) {
-                                this.form.errors.push(`${error.response.data[property]}`)
-                            }
-                        }
-                        else {
-                            this.form.errors.push('Something went wrong. Please try again later.')
-                            console.log(JSON.stringify(error))
-                        }
-                    })
-                    .finally(() => {
-                        this.isSubmitting = false; // Set to false when submission ends
-                    });
             }
             
            

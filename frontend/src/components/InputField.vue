@@ -1,10 +1,10 @@
 <template>
     <div class="mb-3">
-        <label :for="id" class="block text-gray-500 text-xs font-bold">
+        <label :for="id" class="block text-gray-500 font-bold mb-2">
             {{ label }}
         </label>
         <input :id="id" :type="type" :placeholder="placeholder" v-model="inputValue"
-            class="text-xs p-2 rounded border border-gray-400 focus:outline-blue-700 w-full block" />
+            class=" p-2 rounded border border-gray-400 focus:outline-blue-700 w-full block" />
     </div>
 </template>
 
