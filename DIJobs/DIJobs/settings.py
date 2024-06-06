@@ -34,7 +34,9 @@ INSTALLED_APPS = [
     'rest_framework', 
     'rest_framework.authtoken', 
     'corsheaders', 
-    'djoser', 
+    'djoser',
+
+    'jobs',
 ]
 
 REST_FRAMEWORK = {
