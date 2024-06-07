@@ -1,5 +1,5 @@
 <template>
-    <div class="border border-indigo-200 bg-indigo-50 p-4 mx-1 rounded shadow">
+    <div class="border border-indigo-200 bg-indigo-50 p-4 mx-1 rounded shadow hover:scale-105 duration-100">
         <div class="text-indigo-800 font-bold mb-2">{{ job.title }}</div>
         <div class="text-sm text-red-800 flex mb-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 mr-1">
@@ -55,14 +55,17 @@
 
             </div>
         </div>
-        <div class="grid grid-cols-2 gap-4">
-            <div class=" rounded-lg text-xs text-green-800">#{{ job.category_name }}</div>
-            <div class="flex justify-end text-xs text-gray-400">Published on: {{ formatDate(job.date_added) }}</div>
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <div class="text-xs text-green-800 hover:underline hover:font-bold">
+                <router-link :to="job.category_name"> #{{ job.category_name }}</router-link>
+            </div>
+            <div class="flex justify-end text-xs text-gray-500">Published on: {{ formatDate(job.date_added) }}</div>
         </div>
         <div class="flex text-xs mt-2">
-            <router-link :to="job.get_absolute_url" class="mr-2 bg-indigo-800 text-white p-2 rounded hover:bg-indigo-900">View
+            <router-link :to="job.get_absolute_url"
+                class="mr-2 bg-indigo-800 text-white p-2 rounded hover:bg-indigo-900">View
                 Details</router-link>
-                <button class="bg-green-800 text-white p-2 rounded hover:bg-green-900">Apply Now</button>
+            <button class="bg-green-800 text-white p-2 rounded hover:bg-green-900">Apply Now</button>
         </div>
 
     </div>

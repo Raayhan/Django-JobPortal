@@ -1,6 +1,6 @@
 <template>
-  <h1 class="flex justify-center text-lg italic text-indigo-800 mt-4 mb-8">Latest Hot Jobs</h1>
-  <div class="grid grid-cols-4 mx-4">
+ 
+  <div class="grid grid-cols-4 mx-4 mt-6">
     <JobBox v-for="job in latestJobs" v-bind:key="job.id" v-bind:job="job"></JobBox>
   </div>
 
@@ -22,7 +22,7 @@ export default {
   },
   mounted() {
     this.getLatestJobs()
-    document.title = 'Home | DIJobs'
+    document.title = 'Home | DJobs'
   },
   methods: {
     async getLatestJobs() {
