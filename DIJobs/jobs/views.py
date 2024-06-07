@@ -19,6 +19,7 @@ class LatestJobsList(APIView):
     
 class CategoryDetail(APIView):
     permission_classes = [AllowAny]
+
     def get_object(self,category_slug):
         try:
             return Category.objects.get(slug=category_slug)
@@ -28,4 +29,18 @@ class CategoryDetail(APIView):
     def get(self, request, category_slug, format=None):
         category = self.get_object(category_slug)
         serializer = CategorySerializer(category)
+        return Response(serializer.data)
+
+class JobDetail(APIView):
+    permission_classes = [AllowAny]
+    
+    def get_object(self,category_slug,job_slug):
+        try:
+            return Job.objects.filter(category__slug=category_slug).get(slug=job_slug)
+        except Job.DoesNotExist:
+            raise Http404
+    
+    def get(self, request, category_slug, job_slug, format=None):
+        job = self.get_object(category_slug, job_slug)
+        serializer = JobSerializer(job)
         return Response(serializer.data)
