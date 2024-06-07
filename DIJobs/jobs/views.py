@@ -13,7 +13,7 @@ class LatestJobsList(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request, format=None):
-        jobs = Job.objects.all()[0:4]
+        jobs = Job.objects.all()[0:16]
         serializer = JobSerializer(jobs, many=True)
         return Response(serializer.data)
     

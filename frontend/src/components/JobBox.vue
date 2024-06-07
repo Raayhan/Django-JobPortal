@@ -1,5 +1,6 @@
 <template>
-    <div class="border border-indigo-200 bg-indigo-50 p-4 mx-1 rounded shadow hover:scale-105 duration-100">
+    <div
+        class="border border-indigo-200 bg-indigo-50 p-4 mx-1 rounded shadow duration-100 mb-4 max-h-56 min-h-56 relative">
         <div class="text-indigo-800 font-bold mb-2">{{ job.title }}</div>
         <div class="text-sm text-red-800 flex mb-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 mr-1">
@@ -61,7 +62,7 @@
             </div>
             <div class="flex justify-end text-xs text-gray-500">Published on: {{ formatDate(job.date_added) }}</div>
         </div>
-        <div class="flex text-xs mt-2">
+        <div class="flex text-xs mt-2 absolute bottom-3">
             <router-link :to="job.get_absolute_url"
                 class="mr-2 bg-indigo-800 text-white p-2 rounded hover:bg-indigo-900">View
                 Details</router-link>

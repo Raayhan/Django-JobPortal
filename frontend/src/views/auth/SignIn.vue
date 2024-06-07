@@ -88,7 +88,7 @@ export default {
         }
     },
     mounted() {
-        document.title = 'Sign in | DIJobs'
+        document.title = 'Sign in | DJobs'
     }
 }
 </script>

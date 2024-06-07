@@ -1,6 +1,6 @@
 <template>
  
-  <div class="grid grid-cols-4 mx-4 mt-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 mx-4 mt-6">
     <JobBox v-for="job in latestJobs" v-bind:key="job.id" v-bind:job="job"></JobBox>
   </div>
 

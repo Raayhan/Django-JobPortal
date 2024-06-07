@@ -105,7 +105,7 @@ export default {
         }
     },
     mounted() {
-        document.title = 'Sign up | DIJobs'
+        document.title = 'Sign up | DJobs'
     }
 }
 </script>
