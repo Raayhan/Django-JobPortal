@@ -105,7 +105,7 @@ export default {
         }
     },
     mounted() {
-        document.title = 'Sign up | DJobs'
+        document.title = 'Sign up | Djobs'
     }
 }
 </script>

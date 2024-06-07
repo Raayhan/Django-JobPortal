@@ -88,7 +88,7 @@ export default {
         }
     },
     mounted() {
-        document.title = 'Sign in | DJobs'
+        document.title = 'Sign in | Djobs'
     }
 }
 </script>

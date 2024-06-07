@@ -37,7 +37,7 @@ export default {
                 .get(`/api/v1/jobs/${category_slug}/`)
                 .then(response => {
                     this.category = response.data
-                    document.title = this.category.name + ' | DJobs'
+                    document.title = this.category.name + ' | Djobs'
                 })
                 .catch(error => {
                     console.log(error)

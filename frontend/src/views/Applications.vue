@@ -11,7 +11,7 @@ export default {
   name: 'applications',
   mounted() {
     
-    document.title = 'Applications | DIJobs';
+    document.title = 'Applications | Djobs';
   },
   
 

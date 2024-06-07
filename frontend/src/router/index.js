@@ -4,6 +4,7 @@ import Applications from '@/views/Applications.vue'
 import SignIn from '@/views/auth/SignIn.vue'
 import SignUp from '@/views/auth/SignUp.vue'
 import Category from '@/views/Category.vue'
+import JobDetails from '@/views/JobDetails.vue'
 import store from '../store'
 
 const routes = [
@@ -36,6 +37,11 @@ const routes = [
     path: '/:category_slug/',
     name: 'Category',
     component: Category
+  },
+    {
+    path: '/:category_slug/:job_slug',
+    name: 'JobDetails',
+    component: JobDetails
   }
 ]
 

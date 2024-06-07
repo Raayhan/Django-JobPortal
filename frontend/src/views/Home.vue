@@ -22,7 +22,7 @@ export default {
   },
   mounted() {
     this.getLatestJobs()
-    document.title = 'Home | DJobs'
+    document.title = 'Home | Djobs'
   },
   methods: {
     async getLatestJobs() {
