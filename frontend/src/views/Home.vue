@@ -1,6 +1,6 @@
 <template>
-  <h1 class="flex justify-center text-2xl text-gray-400 my-4">Latest Hot Jobs</h1>
-  <div class="grid grid-cols-4 gap-4">
+  <h1 class="flex justify-center text-lg italic text-indigo-800 mt-4 mb-8">Latest Hot Jobs</h1>
+  <div class="grid grid-cols-4 mx-4">
     <JobBox v-for="job in latestJobs" v-bind:key="job.id" v-bind:job="job"></JobBox>
   </div>
 
