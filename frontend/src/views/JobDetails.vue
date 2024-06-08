@@ -45,7 +45,7 @@
 
         </div>
         <div class="flex justify-center mt-6">
-            <button class="bg-green-800 text-white w-40 py-2 rounded hover:bg-green-900">Apply Now</button>
+            <router-link :to="job.get_absolute_url+`apply`" class="bg-green-800 text-white text-center w-40 py-2 rounded hover:bg-green-900">Apply Now</router-link>
         </div>
 
 

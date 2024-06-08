@@ -66,7 +66,8 @@
             <router-link :to="job.get_absolute_url"
                 class="mr-2 bg-indigo-800 text-white p-2 rounded hover:bg-indigo-900">View
                 Details</router-link>
-            <button class="bg-green-800 text-white p-2 rounded hover:bg-green-900">Apply Now</button>
+            <router-link :to="job.get_absolute_url + `apply`"
+                class="bg-green-800 text-white p-2 rounded hover:bg-green-900">Apply Now</router-link>
         </div>
 
     </div>

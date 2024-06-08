@@ -5,6 +5,7 @@ import SignIn from '@/views/auth/SignIn.vue'
 import SignUp from '@/views/auth/SignUp.vue'
 import Category from '@/views/Category.vue'
 import JobDetails from '@/views/JobDetails.vue'
+import Apply from '@/views/job/Apply.vue'
 import store from '../store'
 
 const routes = [
@@ -17,7 +18,7 @@ const routes = [
     path: '/applications',
     name: 'applications',
     component: Applications,
-     meta: {
+    meta: {
       requireLogin:true
     }
    
@@ -38,10 +39,18 @@ const routes = [
     name: 'Category',
     component: Category
   },
-    {
+  {
     path: '/:category_slug/:job_slug',
     name: 'JobDetails',
     component: JobDetails
+  },
+  {
+    path: '/:category_slug/:job_slug/apply',
+    name: 'Apply',
+    component: Apply,
+    meta: {
+      requireLogin:true
+    }
   }
 ]
 
