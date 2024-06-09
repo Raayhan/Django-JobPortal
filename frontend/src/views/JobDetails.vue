@@ -45,7 +45,8 @@
 
         </div>
         <div class="flex justify-center mt-6">
-            <router-link :to="job.get_absolute_url+`apply`" class="bg-green-800 text-white text-center w-40 py-2 rounded hover:bg-green-900">Apply Now</router-link>
+            <router-link :to="job.get_absolute_url+`apply`"
+                class="bg-green-800 text-white text-center w-40 py-2 rounded hover:bg-green-900">Apply Now</router-link>
         </div>
 
 
@@ -78,6 +79,7 @@ export default {
                 .then(response => {
                     this.job = response.data
                     document.title = this.job.title + ' | Djobs'
+                    console.log(this.job.id)
                 })
                 .catch(error => {
                     console.log(error)

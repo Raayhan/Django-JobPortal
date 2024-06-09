@@ -5,7 +5,7 @@ import SignIn from '@/views/auth/SignIn.vue'
 import SignUp from '@/views/auth/SignUp.vue'
 import Category from '@/views/Category.vue'
 import JobDetails from '@/views/JobDetails.vue'
-import Apply from '@/views/job/Apply.vue'
+import JobApplication from '@/views/JobApplication.vue'
 import store from '../store'
 
 const routes = [
@@ -46,12 +46,13 @@ const routes = [
   },
   {
     path: '/:category_slug/:job_slug/apply',
-    name: 'Apply',
-    component: Apply,
+    name: 'JobApplication',
+    component: JobApplication,
+    props: true,
     meta: {
       requireLogin:true
     }
-  }
+ }
 ]
 
 const router = createRouter({

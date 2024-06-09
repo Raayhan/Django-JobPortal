@@ -18,7 +18,8 @@ class JobSerializer(serializers.ModelSerializer):
             "company",
             "experience",
             "location",
-            "deadline"
+            "deadline",
+            "slug"
             
         )
     def get_category_name(self, obj):
