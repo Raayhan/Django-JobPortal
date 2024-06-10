@@ -18,6 +18,7 @@ class SubmitApplication(APIView):
         data = request.data.copy()
         data['candidate_id'] = request.user.id
         data['job_id'] = job.id
+        data['status'] = 0
         
         serializer = ApplicationSerializer(data=data)
         if serializer.is_valid():

@@ -4,10 +4,11 @@ from .models import Application
 class ApplicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Application
-        fields = ('candidate_id', 'job_id', 'name', 'email', 'phone', 'cv', 'expected_salary', 'notes')
+        fields = ('candidate_id', 'job_id', 'name', 'email', 'phone', 'cv', 'expected_salary', 'notes','status')
         extra_kwargs = {
             'candidate_id': {'read_only': True},
             'job_id': {'read_only': True},
+            'status': {'read_only': True},
         }
     
     def validate_phone(self, value):
