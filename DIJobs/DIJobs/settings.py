@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'ckeditor',
 
     'jobs',
+    'applications'
 ]
 
 REST_FRAMEWORK = {

@@ -11,7 +11,7 @@
         <form @submit.prevent="handleSubmit">
             <InputField id="name" label="Name" type="text" v-model="form.name" readonly />
             <InputField id="email" label="Email" type="email" v-model="form.email" readonly />
-            <InputField id="phone" label="Phone" type="number" v-model="form.phone" placeholder="Enter Phone" />
+            <InputField id="phone" label="Phone" type="text" v-model="form.phone" placeholder="Enter Phone" />
             <InputField id="cv" label="Attach CV" type="file" v-model="form.cv" />
             <InputField id="expected_salary" label="Expected Salary" type="number" v-model="form.expected_salary" placeholder="Enter Expected Salary" />
             <InputField id="notes" label="Notes (Optional)" type="text" v-model="form.notes" placeholder="Enter Additional Notes" />
@@ -44,7 +44,7 @@ export default {
             form: {
                 name: '',
                 email:'',
-                phone:'',
+                phone:'+88',
                 cv: '',
                 expected_salary: '',
                 notes:'',
