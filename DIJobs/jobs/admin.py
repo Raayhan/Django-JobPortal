@@ -12,6 +12,14 @@ class JobAdminForm(forms.ModelForm):
 
 class JobAdmin(admin.ModelAdmin):
     form = JobAdminForm
+    
 
-admin.site.register(Category)
-admin.site.register(Job)
+class JobList(admin.ModelAdmin):
+    list_display = ("title","category","company","location","salary","deadline","date_added")
+
+class CategoryList(admin.ModelAdmin):
+    list_display = ("name","slug")
+
+    
+admin.site.register(Category,CategoryList)
+admin.site.register(Job,JobList)
