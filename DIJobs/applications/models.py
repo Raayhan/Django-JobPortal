@@ -23,7 +23,7 @@ class Application(models.Model):
     phone           = models.CharField(max_length=14)
     cv              = models.FileField(upload_to='cvs/', validators=[validate_cv_file])
     expected_salary = models.DecimalField(max_digits=8,decimal_places=2)
-    notes           = models.CharField(max_length=255)
+    notes           = models.CharField(max_length=255,null=True,blank=True)
     status          = models.IntegerField(default=0)
     created_at      = models.DateTimeField(auto_now_add=True)
  

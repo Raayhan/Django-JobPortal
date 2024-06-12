@@ -24,7 +24,7 @@ export default {
             type: String,
             default: 'text',
             validator: function (value) {
-                return ['text', 'number', 'password','email'].includes(value);
+                return ['text', 'number', 'password','email','file'].includes(value);
             }
         },
         placeholder: {
@@ -51,9 +51,5 @@ export default {
     }
 };
 </script>
-<style scoped>
-.input:placeholder{
-    font-weight: 400!important;
-}
-</style>
+
 

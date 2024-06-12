@@ -5,5 +5,5 @@ from .views import SubmitApplication
 
 urlpatterns = [
     
-    path('jobs/apply/<int:job_id>/', SubmitApplication.as_view()),
+    path('jobs/<slug:category_slug>/<slug:job_slug>/apply', SubmitApplication.as_view()),
 ]

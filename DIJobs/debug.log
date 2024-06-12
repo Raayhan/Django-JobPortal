@@ -1,0 +1,754 @@
+INFO 2024-06-12 10:51:59,095 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 10:52:11,485 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 10:52:11,987 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 10:52:22,328 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 10:52:22,750 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 10:52:35,189 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 10:52:35,589 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 10:52:37,790 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 10:52:38,244 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 10:52:52,686 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 10:52:53,140 autoreload Watching for file changes with StatReloader
+DEBUG 2024-06-12 10:53:20,789 views Request data before copy: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['160000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>]}>
+DEBUG 2024-06-12 10:53:20,790 views Modified data: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['160000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>], 'candidate': [13], 'job': [6], 'status': [0]}>
+ERROR 2024-06-12 10:53:20,829 log Internal Server Error: /api/v1/jobs/fullstack/software-engineer-full-stack/apply
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MySQLdb.IntegrityError: (1048, "Column 'candidate_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py", line 29, in post
+    serializer.save()
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: (1048, "Column 'candidate_id' cannot be null")
+INFO 2024-06-12 10:55:26,204 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 10:55:26,542 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 10:55:29,717 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 10:55:30,007 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 10:55:44,394 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 10:55:44,876 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 10:55:56,217 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 10:55:56,545 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 10:55:57,795 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 10:55:58,206 autoreload Watching for file changes with StatReloader
+DEBUG 2024-06-12 10:56:24,567 views Request data before copy: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['145000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>]}>
+DEBUG 2024-06-12 10:56:24,567 views Modified data: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['145000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>], 'candidate': ['13'], 'job': ['6'], 'status': ['0']}>
+ERROR 2024-06-12 10:56:24,607 log Internal Server Error: /api/v1/jobs/fullstack/software-engineer-full-stack/apply
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MySQLdb.IntegrityError: (1048, "Column 'candidate_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py", line 29, in post
+    serializer.save()
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: (1048, "Column 'candidate_id' cannot be null")
+INFO 2024-06-12 11:00:19,393 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 11:00:19,712 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:00:22,961 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 11:00:23,373 autoreload Watching for file changes with StatReloader
+DEBUG 2024-06-12 11:00:33,180 views Request data before copy: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['145000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>]}>
+DEBUG 2024-06-12 11:00:33,180 views Modified data: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['145000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>], 'candidate_id': ['13'], 'job_id': ['6'], 'status': ['0']}>
+ERROR 2024-06-12 11:00:33,223 log Internal Server Error: /api/v1/jobs/fullstack/software-engineer-full-stack/apply
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MySQLdb.IntegrityError: (1048, "Column 'candidate_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py", line 29, in post
+    serializer.save()
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: (1048, "Column 'candidate_id' cannot be null")
+DEBUG 2024-06-12 11:08:51,589 views Request data before copy: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['145000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>]}>
+DEBUG 2024-06-12 11:08:51,589 views Modified data: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['145000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>], 'candidate_id': ['13'], 'job_id': ['6'], 'status': ['0']}>
+ERROR 2024-06-12 11:08:51,626 log Internal Server Error: /api/v1/jobs/fullstack/software-engineer-full-stack/apply
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MySQLdb.IntegrityError: (1048, "Column 'job_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py", line 29, in post
+    serializer.save()
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: (1048, "Column 'job_id' cannot be null")
+DEBUG 2024-06-12 11:09:16,287 views Request data before copy: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+88'], 'expected_salary': ['145000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>]}>
+DEBUG 2024-06-12 11:09:16,288 views Modified data: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+88'], 'expected_salary': ['145000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>], 'candidate_id': ['13'], 'job_id': ['6'], 'status': ['0']}>
+INFO 2024-06-12 11:09:16,291 views Application created for job: software-engineer-full-stack, candidate: 13
+INFO 2024-06-12 11:10:13,191 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 11:10:13,542 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:10:15,786 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 11:10:16,108 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:10:19,357 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 11:10:19,668 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:10:22,929 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 11:10:23,228 autoreload Watching for file changes with StatReloader
+DEBUG 2024-06-12 11:10:46,893 views Request data before copy: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['145000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>]}>
+DEBUG 2024-06-12 11:10:46,894 views Modified data: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['145000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>], 'candidate_id': ['13'], 'job_id': ['5'], 'status': ['0']}>
+INFO 2024-06-12 11:10:46,898 views Application created for job: senior-fullstack-developer, candidate: 13
+INFO 2024-06-12 11:11:20,123 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 11:11:20,536 autoreload Watching for file changes with StatReloader
+DEBUG 2024-06-12 11:11:38,490 views Request data before copy: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['160000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>]}>
+DEBUG 2024-06-12 11:11:38,490 views Modified data: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['160000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>], 'candidate_id': ['13'], 'job_id': ['5'], 'status': ['0']}>
+INFO 2024-06-12 11:11:38,494 views Application created for job: senior-fullstack-developer, candidate: 13
+INFO 2024-06-12 11:21:31,695 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:31:12,029 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 11:31:14,269 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:32:16,578 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 11:32:18,177 autoreload Watching for file changes with StatReloader
+DEBUG 2024-06-12 11:33:07,731 views Authenticated user ID: 13
+DEBUG 2024-06-12 11:33:07,731 views Job ID: 4
+DEBUG 2024-06-12 11:33:07,743 views Modified data: <QueryDict: {'name': ['Lesley Richards'], 'email': ['LRichards@democracyinternational.com'], 'phone': ['+8801717272999'], 'expected_salary': ['160000'], 'notes': ['N/A'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>], 'candidate': [13], 'job': [4], 'status': [0]}>
+ERROR 2024-06-12 11:33:08,108 log Internal Server Error: /api/v1/jobs/backend/php-backend-developer/apply
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MySQLdb.IntegrityError: (1048, "Column 'candidate_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py", line 37, in post
+    serializer.save()
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: (1048, "Column 'candidate_id' cannot be null")
+INFO 2024-06-12 11:45:43,060 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 11:45:44,524 autoreload Watching for file changes with StatReloader
+DEBUG 2024-06-12 11:46:16,832 views Authenticated user ID: 13
+DEBUG 2024-06-12 11:46:16,833 views Job ID: 4
+DEBUG 2024-06-12 11:46:16,845 views Modified data: <QueryDict: {'name': ['L'], 'email': ['L'], 'phone': ['+'], 'expected_salary': ['1'], 'notes': ['N'], 'cv': [<InMemoryUploadedFile: RAYHAN AHMED RAKIB (1).pdf (application/pdf)>], 'candidate': [13], 'job': [4], 'status': [0], 'candidate_id': [13], 'job_id': [4]}>
+ERROR 2024-06-12 11:46:17,207 log Internal Server Error: /api/v1/jobs/backend/php-backend-developer/apply
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MySQLdb.IntegrityError: (1048, "Column 'candidate_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py", line 46, in post
+    serializer.save()
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 331, in _query
+    self._do_get_result(db)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 136, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/MySQLdb/cursors.py", line 363, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: (1048, "Column 'candidate_id' cannot be null")
+INFO 2024-06-12 11:47:47,910 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 11:47:49,907 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:47:54,651 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 11:47:56,515 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:47:58,553 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 11:48:00,772 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:48:17,843 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 11:48:19,418 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:48:24,330 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 11:48:26,592 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 11:48:30,504 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 11:48:32,453 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:00:59,245 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:01:01,551 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:01:20,457 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:01:22,513 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:01:30,721 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:01:32,915 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:01:37,882 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:01:39,966 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:01:59,084 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:02:01,289 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:03:05,237 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:03:06,592 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:04:05,179 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 12:04:07,256 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:04:45,807 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 12:04:47,829 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:08:09,492 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 12:08:12,035 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:08:17,410 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 12:08:19,621 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:08:24,754 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 12:08:27,028 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:13:05,788 autoreload Watching for file changes with StatReloader

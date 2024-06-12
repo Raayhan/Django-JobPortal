@@ -8,13 +8,21 @@
 
     </div>
     <div class=" w-full md:w-3/12 mx-auto mt-6">
-        <form @submit.prevent="handleSubmit">
+        <form @submit.prevent="handleSubmit" enctype="multipart/form-data">
             <InputField id="name" label="Name" type="text" v-model="form.name" readonly />
             <InputField id="email" label="Email" type="email" v-model="form.email" readonly />
             <InputField id="phone" label="Phone" type="text" v-model="form.phone" placeholder="Enter Phone" />
-            <InputField id="cv" label="Attach CV" type="file" v-model="form.cv" />
-            <InputField id="expected_salary" label="Expected Salary" type="number" v-model="form.expected_salary" placeholder="Enter Expected Salary" />
-            <InputField id="notes" label="Notes (Optional)" type="text" v-model="form.notes" placeholder="Enter Additional Notes" />
+            <div class="mb-3">
+                <label :for="cv" class="block text-gray-500 font-bold mb-2">
+                    Attach CV
+                </label>
+                <input :id="cv" type="file" @change="handleFileUpload"
+                    class=" p-2 rounded border border-gray-400 focus:outline-blue-700 w-full block" />
+            </div>
+            <InputField id="expected_salary" label="Expected Salary" type="number" v-model="form.expected_salary"
+                placeholder="Enter Expected Salary" />
+            <InputField id="notes" label="Notes (Optional)" type="text" v-model="form.notes"
+                placeholder="Enter Additional Notes" />
             <div class="" v-if="form.errors.length">
                 <ul v-for="error in form.errors" v-bind:key="error">
                     <li class="bg-red-100 text-red-800 mb-2 ring-1 ring-red-200 text-center rounded p-2">{{ error }}
@@ -45,12 +53,13 @@ export default {
                 name: '',
                 email:'',
                 phone:'+88',
-                cv: '',
+                cv: null,
                 expected_salary: '',
-                notes:'',
+                notes: '',
                 errors: []
             },
-            isSubmitting: false
+            isSubmitting: false,
+            cv:null
         }
     },
     props: {
@@ -83,6 +92,9 @@ export default {
     },
     methods: {
 
+        handleFileUpload(event) {
+            this.form.cv = event.target.files[0];
+        },
         setInitialName() {
             if (this.currentUser) {
                 this.form.name = `${this.currentUser.first_name} ${this.currentUser.last_name}`;
@@ -114,18 +126,28 @@ export default {
             }
             if (!this.form.errors.length) {
                 this.isSubmitting = true;
-                const formData = {
-                    name: this.form.name,
-                    
-                };
+                const formData = new FormData();
+                formData.append('name', this.form.name);
+                formData.append('email', this.form.email);
+                formData.append('phone', this.form.phone);
+                formData.append('cv', this.form.cv); 
+                formData.append('expected_salary', this.form.expected_salary);
+                formData.append('notes', this.form.notes);
+                
                 try {
-                    const response = await axios.post("/api/v1/token/login", formData);
-                    const token = response.data.auth_token;
-                    this.$store.commit('setToken', token);
-                    localStorage.setItem("token", token);
-                    await this.$store.dispatch('fetchUser');
-                    const toPath = this.$route.query.to || '/applications';
+                    
+                    const category_slug = this.$route.params.category_slug
+                    const job_slug = this.$route.params.job_slug
+                    const token = localStorage.getItem('token');  // Adjust based on your auth implementation
+                    const response = await axios.post(`/api/v1/jobs/${category_slug}/${job_slug}/apply`, formData, {
+                        headers: {
+                            "Content-Type": "multipart/form-data",
+                            "Authorization": `Token ${token}`
+                        }
+                    });
+                    const toPath = '/applications';
                     this.$router.push(toPath);
+
                 } catch (error) {
                     if (error.response) {
                         for (const property in error.response.data) {
