@@ -32,30 +32,31 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-white border-b">
+          <tr v-for="application in applications" v-bind:key="application.id" v-bind:application="application"
+            class="bg-white border-b">
             <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap">
-              Apple MacBook Pro 17"
-            </th>
+              <router-link class="text-indigo-800 hover:underline" :to="application.job.get_absolute_url"> {{ application.job.title }}</router-link>
+              </th>
             <td class="">
-              Silver
+              {{ application.job.company }}
             </td>
             <td class="">
-              Laptop
+              {{ application.job.location }}
             </td>
             <td class="">
-              $2999
+              <span :class="statusClass(application.status)">{{ statusText(application.status) }}</span>
             </td>
             <td class="">
-              $2999
+              {{ formatDate(application.created_at) }}
             </td>
             <td class="">
-              $2999
+              {{ formatDate(application.job.deadline) }}
             </td>
             <td class="">
-             Withdraw
+              <button class="text-red-700 font-bold underline">Withdraw</button>
             </td>
           </tr>
-          
+
         </tbody>
       </table>
     </div>
@@ -64,13 +65,65 @@
   </div>
 </template>
 <script>
+import axios from 'axios'
+import moment from 'moment';
 
 export default {
-  name: 'applications',
-  mounted() {
+  name: 'Applications',
+  data() {
+    return {
+      applications:[],
+      statuses: {
+        '0': { class: 'text-xs text-violet-700 bg-violet-100 font-bold tracking-wider capitalized rounded py-1 px-2', text: 'Application Received' },
+        '1': { class: 'text-xs text-yellow-700 bg-yellow-100 font-bold capitalized tracking-wider rounded py-1 px-2', text: 'Under Consideration' },
+        '2': { class: 'text-xs text-green-700 bg-green-100 font-bold capitalized tracking-wider rounded py-1 px-2', text: 'Accepted' },
+        '3': { class: 'text-xs text-red-700 bg-red-100 font-bold capitalized tracking-wider rounded py-1 px-2', text: 'Rejected' },
+
+      },
+    }
     
-    document.title = 'Applications | Djobs';
   },
+  mounted() {
+    document.title = 'Applications | DJobs';
+    this.getApplications()
+    
+
+  },
+  methods: {
+
+    async getApplications() {
+      this.$store.commit('setIsLoading', true)
+      const token = localStorage.getItem('token');
+      await axios
+        .get('api/v1/applications/user', {
+          headers: {
+            "Content-Type": "multipart/form-data",
+            "Authorization": `Token ${token}`
+          }
+        })
+        .then(response => { this.applications = response.data })
+        .catch(error => {
+          console.log(error)
+
+        })
+      this.$store.commit('setIsLoading', false)
+      //console.table(this.applications)
+       
+    },
+
+    formatDate(date) {
+
+      return moment(date).format('DD-MM-YYYY');
+    },
+    statusClass(status) {
+      return this.statuses[status]?.class || '';
+    },
+    statusText(status) {
+      return this.statuses[status]?.text || 'Unknown';
+    },
+    
+
+  }
   
 
 }

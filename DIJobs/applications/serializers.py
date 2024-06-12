@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
 class JobSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
-        fields = ['id']
+        fields = ['id','title','deadline','company','location','get_absolute_url',]
 
 class ApplicationSerializer(serializers.ModelSerializer):
     candidate = UserSerializer(read_only=True)

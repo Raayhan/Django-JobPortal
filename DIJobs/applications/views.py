@@ -36,9 +36,22 @@ class SubmitApplication(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class CheckApplicationStatus(APIView):
+    permission_classes = [IsAuthenticated]
+
     def get(self, request, user_id, job_id):
         try:
             application = Application.objects.get(candidate_id=user_id, job_id=job_id)
             return Response({"applied": True})
         except Application.DoesNotExist:
             return Response({"applied": False})
+
+class UserApplicationsView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        
+        applications = Application.objects.filter(candidate_id=request.user.id)
+       
+        serializer = ApplicationSerializer(applications, many=True)
+        
+        return Response(serializer.data, status=status.HTTP_200_OK)

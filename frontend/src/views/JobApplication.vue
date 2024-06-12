@@ -3,51 +3,62 @@
     <div class="text-center text-gray-600 text-2xl my-6">Apply for :
         <span class="text-indigo-800">{{ job.title }}</span>
     </div>
-    <div class="text-center text-gray-600 mt-14 text-sm">
-        Please fill out below information before submitting your application
+    <div v-if="!isAlreadyApplied">
+        <div class="text-center text-gray-600 mt-14 text-sm">
+            Please fill out below information before submitting your application
 
+        </div>
+        <div class=" w-full md:w-3/12 mx-auto mt-6">
+            <form @submit.prevent="handleSubmit" enctype="multipart/form-data">
+                <InputField id="name" label="Name" type="text" v-model="form.name" readonly />
+                <InputField id="email" label="Email" type="email" v-model="form.email" readonly />
+                <InputField id="phone" label="Phone" type="text" v-model="form.phone" placeholder="Enter Phone" />
+                <div class="mb-3">
+                    <label :for="cv" class="block text-gray-500 font-bold mb-2">
+                        Attach CV
+                    </label>
+                    <input :id="cv" type="file" @change="handleFileUpload"
+                        class=" p-2 rounded border border-gray-400 focus:outline-blue-700 w-full block" />
+                </div>
+                <InputField id="expected_salary" label="Expected Salary" type="number" v-model="form.expected_salary"
+                    placeholder="Enter Expected Salary" />
+                <InputField id="notes" label="Notes (Optional)" type="text" v-model="form.notes"
+                    placeholder="Enter Additional Notes" />
+                <div class="" v-if="form.errors.length">
+                    <ul v-for="error in form.errors" v-bind:key="error">
+                        <li class="bg-red-100 text-red-800 mb-2 ring-1 ring-red-200 text-center rounded p-2">{{ error }}
+                        </li>
+                    </ul>
+
+                </div>
+                <button type="submit"
+                    :class="{ 'bg-indigo-500 animate-pulse': isSubmitting, 'bg-indigo-700': !isSubmitting, 'bg-indigo-300': isAlreadyApplied }"
+                    :disabled="isSubmitting || isAlreadyApplied"
+                    class="mb-4 text-white flex justify-center w-full rounded p-3 mt-4">
+                    <span v-if="!isAlreadyApplied">Submit
+                        Application</span>
+                    <span class="flex items-center" v-else>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-5 mr-0.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        Already Applied</span>
+                </button>
+
+            </form>
+
+        </div>
     </div>
-    <div class=" w-full md:w-3/12 mx-auto mt-6">
-        <form @submit.prevent="handleSubmit" enctype="multipart/form-data">
-            <InputField id="name" label="Name" type="text" v-model="form.name" readonly />
-            <InputField id="email" label="Email" type="email" v-model="form.email" readonly />
-            <InputField id="phone" label="Phone" type="text" v-model="form.phone" placeholder="Enter Phone" />
-            <div class="mb-3">
-                <label :for="cv" class="block text-gray-500 font-bold mb-2">
-                    Attach CV
-                </label>
-                <input :id="cv" type="file" @change="handleFileUpload"
-                    class=" p-2 rounded border border-gray-400 focus:outline-blue-700 w-full block" />
-            </div>
-            <InputField id="expected_salary" label="Expected Salary" type="number" v-model="form.expected_salary"
-                placeholder="Enter Expected Salary" />
-            <InputField id="notes" label="Notes (Optional)" type="text" v-model="form.notes"
-                placeholder="Enter Additional Notes" />
-            <div class="" v-if="form.errors.length">
-                <ul v-for="error in form.errors" v-bind:key="error">
-                    <li class="bg-red-100 text-red-800 mb-2 ring-1 ring-red-200 text-center rounded p-2">{{ error }}
-                    </li>
-                </ul>
-
-            </div>
-            <button type="submit"
-                :class="{ 'bg-indigo-500 animate-pulse': isSubmitting, 'bg-indigo-700': !isSubmitting, 'bg-indigo-300' : isAlreadyApplied }"
-                :disabled="isSubmitting||isAlreadyApplied"
-                class="mb-4 text-white flex justify-center w-full rounded p-3 mt-4">
-                <span v-if="!isAlreadyApplied">Submit
-                    Application</span>
-                <span class="flex items-center" v-else>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-5 mr-0.5">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    </svg>
-                    Already Applied</span>
-            </button>
-
-        </form>
-
+    <div v-else class="flex justify-center items-center text-green-800 font-bold">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-5 mr-0.5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+        You have already applied for this position
     </div>
+
 
 </template>
 <script>

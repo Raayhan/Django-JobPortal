@@ -103,10 +103,11 @@ export default {
         formatDate(date) {
             return moment(date).format('DD-MM-YYYY');
         },
-        checkApplication() {
+        async checkApplication() {
+            this.$store.commit('setIsLoading', true)
             const job_id = this.job.id;
             const user_id = `${this.currentUser.id}`;
-            axios.get(`/api/v1/applications/check/${user_id}/${job_id}/`)
+            await axios.get(`/api/v1/applications/check/${user_id}/${job_id}/`)
                 .then(response => {
                     if (response.data.applied) {
                         // User has already applied for the job
@@ -121,6 +122,7 @@ export default {
                 .catch(error => {
                     console.error('Error checking application status:', error);
                 });
+            this.$store.commit('setIsLoading', false)
         }
     }
 

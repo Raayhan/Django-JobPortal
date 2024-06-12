@@ -1034,3 +1034,72 @@ WARNING 2024-06-12 16:27:07,022 log Not Found: /api/v1/applications/check/1/null
 WARNING 2024-06-12 16:27:42,853 log Not Found: /api/v1/applications/check/1/null/
 WARNING 2024-06-12 16:28:08,943 log Not Found: /api/v1/applications/check/1/null/
 WARNING 2024-06-12 16:41:47,585 log Bad Request: /api/v1/jobs/fullstack/software-engineer-full-stack/apply
+INFO 2024-06-12 19:31:17,531 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 19:31:17,863 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:31:20,109 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 19:31:20,407 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:31:58,114 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 19:31:58,658 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:32:18,188 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 19:32:18,492 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:32:27,811 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 19:32:28,133 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:32:30,371 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 19:32:30,667 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:32:32,890 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 19:32:33,219 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:35:34,340 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:35:34,665 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:35:36,817 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:35:37,125 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:35:39,270 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:35:39,577 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:35:50,891 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:35:51,192 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:35:57,387 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:35:57,670 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:35:59,837 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:36:00,144 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:36:02,336 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:36:02,664 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:36:12,913 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:36:13,198 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:36:21,425 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:36:21,713 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:36:23,877 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:36:24,262 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:36:31,479 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:36:31,770 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:36:32,939 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:36:33,235 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:36:34,396 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:36:34,687 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 19:37:09,164 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 19:37:09,464 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-12 19:37:54,829 log Not Found: /applications/user
+WARNING 2024-06-12 19:38:02,115 log Not Found: /applications/user/
+WARNING 2024-06-12 19:39:09,913 log Not Found: /applications/user/
+WARNING 2024-06-12 19:39:29,664 log Unauthorized: /api/v1/applications/user/
+WARNING 2024-06-12 19:39:37,447 log Unauthorized: /api/v1/applications/user/
+WARNING 2024-06-12 19:53:23,182 log Unauthorized: /api/v1/applications/user/
+WARNING 2024-06-12 19:53:27,640 log Unauthorized: /api/v1/applications/user/
+WARNING 2024-06-12 19:53:38,427 log Unauthorized: /api/v1/applications/user/
+WARNING 2024-06-12 19:53:40,444 log Unauthorized: /api/v1/applications/user/
+INFO 2024-06-12 20:00:28,853 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 20:00:29,156 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 20:00:31,396 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 20:00:31,708 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 20:00:33,957 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 20:00:34,510 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 20:03:30,809 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 20:03:31,211 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 20:03:35,490 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 20:03:35,786 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 20:04:18,519 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 20:04:19,041 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 23:16:58,936 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 23:16:59,412 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 23:17:03,684 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 23:17:04,048 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 23:17:06,238 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 23:17:06,652 autoreload Watching for file changes with StatReloader
