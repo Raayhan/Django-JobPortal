@@ -752,3 +752,162 @@ INFO 2024-06-12 12:08:19,621 autoreload Watching for file changes with StatReloa
 INFO 2024-06-12 12:08:24,754 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
 INFO 2024-06-12 12:08:27,028 autoreload Watching for file changes with StatReloader
 INFO 2024-06-12 12:13:05,788 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-12 12:16:19,217 log Bad Request: /api/v1/jobs/fullstack/senior-fullstack-developer/apply
+WARNING 2024-06-12 12:16:45,761 log Bad Request: /api/v1/jobs/fullstack/senior-fullstack-developer/apply
+WARNING 2024-06-12 12:27:23,062 log Bad Request: /api/v1/jobs/fullstack/senior-fullstack-developer/apply
+INFO 2024-06-12 12:30:11,945 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:30:13,384 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:30:40,803 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:30:42,721 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:30:46,325 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:30:48,120 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:30:52,926 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:30:54,477 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:31:00,390 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:31:02,018 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-12 12:31:49,049 log Internal Server Error: /api/v1/jobs/fullstack/senior-fullstack-developer/apply
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py", line 32, in post
+    serializer.save()
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py", line 32, in create
+    current_user_first_name = self.context['request'].user.first_name
+                              ~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'request'
+INFO 2024-06-12 12:32:41,213 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:32:42,898 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:32:44,856 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:32:46,675 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:32:56,310 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:32:58,107 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-12 12:33:28,593 log Internal Server Error: /api/v1/jobs/fullstack/senior-fullstack-developer/apply
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py", line 32, in post
+    serializer.save()
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py", line 32, in create
+    current_user_first_name = request.user.first_name
+                              ^^^^^^^
+NameError: name 'request' is not defined
+INFO 2024-06-12 12:44:03,788 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:44:05,047 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 12:47:00,315 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:47:02,128 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-12 12:47:29,361 log Internal Server Error: /api/v1/jobs/fullstack/senior-fullstack-developer/apply
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py", line 32, in post
+    serializer.save()
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py", line 29, in create
+    current_user_first_name = self.context['request'].user.first_name
+                              ~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'request'
+INFO 2024-06-12 12:48:32,723 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 12:48:34,530 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-12 12:48:52,961 log Internal Server Error: /api/v1/jobs/fullstack/senior-fullstack-developer/apply
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py", line 32, in post
+    serializer.save()
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py", line 33, in create
+    uploaded_filename, ext = os.path.splitext(validated_data['cv'].name)
+                             ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'
+INFO 2024-06-12 12:49:57,670 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
+INFO 2024-06-12 12:49:59,496 autoreload Watching for file changes with StatReloader

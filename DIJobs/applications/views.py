@@ -27,7 +27,7 @@ class SubmitApplication(APIView):
         data['job_id'] = job.id
         data['status'] = 0
 
-        serializer = ApplicationSerializer(data=data)
+        serializer = ApplicationSerializer(data=data,context={'request': request})
         if serializer.is_valid():
             serializer.save()
             
