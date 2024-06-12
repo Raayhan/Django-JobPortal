@@ -995,3 +995,41 @@ INFO 2024-06-12 14:06:53,367 autoreload /home/rayhan/DI Software Projects/JobPor
 INFO 2024-06-12 14:06:55,305 autoreload Watching for file changes with StatReloader
 INFO 2024-06-12 14:06:57,724 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/admin.py changed, reloading.
 INFO 2024-06-12 14:06:59,602 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 14:43:37,118 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
+INFO 2024-06-12 14:43:38,892 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 14:44:09,774 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 14:44:11,225 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 14:44:20,849 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 14:44:22,346 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 14:44:35,025 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 14:44:36,567 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 14:44:41,167 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 14:44:43,106 autoreload Watching for file changes with StatReloader
+INFO 2024-06-12 14:51:01,907 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 14:51:03,611 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-12 15:08:47,330 log Not Found: /api/check-application/1/5/
+WARNING 2024-06-12 15:08:47,338 log Not Found: /api/check-application/1/6/
+WARNING 2024-06-12 15:08:47,436 log Not Found: /api/check-application/1/2/
+WARNING 2024-06-12 15:08:47,450 log Not Found: /api/check-application/1/4/
+WARNING 2024-06-12 15:08:47,447 log Not Found: /api/check-application/1/3/
+WARNING 2024-06-12 15:08:47,480 log Not Found: /api/check-application/1/1/
+WARNING 2024-06-12 15:09:42,045 log Not Found: /api/v1/applications/check/1/1/
+WARNING 2024-06-12 15:09:42,051 log Not Found: /api/v1/applications/check/1/5/
+WARNING 2024-06-12 15:09:42,094 log Not Found: /api/v1/applications/check/1/4/
+WARNING 2024-06-12 15:09:42,135 log Not Found: /api/v1/applications/check/1/6/
+WARNING 2024-06-12 15:09:42,164 log Not Found: /api/v1/applications/check/1/3/
+WARNING 2024-06-12 15:09:42,172 log Not Found: /api/v1/applications/check/1/2/
+INFO 2024-06-12 15:09:47,117 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/urls.py changed, reloading.
+INFO 2024-06-12 15:09:48,875 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-12 15:21:53,112 log Not Found: /api/v1/applications/check/1/undefined/
+WARNING 2024-06-12 15:22:04,184 log Not Found: /api/v1/applications/check/1/undefined/
+WARNING 2024-06-12 15:29:42,482 log Not Found: /api/v1/applications/check/1/undefined/
+WARNING 2024-06-12 15:46:38,492 log Not Found: /api/v1/applications/check/1//
+WARNING 2024-06-12 16:01:48,829 log Not Found: /api/v1/applications/check/1/null/
+WARNING 2024-06-12 16:02:14,332 log Not Found: /api/v1/applications/check/1/null/
+WARNING 2024-06-12 16:02:36,579 log Not Found: /api/v1/applications/check/1/null/
+WARNING 2024-06-12 16:26:53,046 log Not Found: /api/v1/applications/check/1/null/
+WARNING 2024-06-12 16:26:55,289 log Not Found: /api/v1/applications/check/1/null/
+WARNING 2024-06-12 16:27:07,022 log Not Found: /api/v1/applications/check/1/null/
+WARNING 2024-06-12 16:27:42,853 log Not Found: /api/v1/applications/check/1/null/
+WARNING 2024-06-12 16:28:08,943 log Not Found: /api/v1/applications/check/1/null/

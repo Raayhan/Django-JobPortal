@@ -34,3 +34,11 @@ class SubmitApplication(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class CheckApplicationStatus(APIView):
+    def get(self, request, user_id, job_id):
+        try:
+            application = Application.objects.get(candidate_id=user_id, job_id=job_id)
+            return Response({"applied": True})
+        except Application.DoesNotExist:
+            return Response({"applied": False})

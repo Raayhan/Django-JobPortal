@@ -31,9 +31,14 @@
 
             </div>
             <button type="submit"
-                :class="{ 'bg-indigo-500 animate-pulse': isSubmitting, 'bg-indigo-700': !isSubmitting }"
-                :disabled="isSubmitting" class="mb-4 text-white flex justify-center w-full rounded p-3 mt-4">Submit
-                Application</button>
+                :class="{ 'bg-indigo-500 animate-pulse': isSubmitting, 'bg-indigo-700': !isSubmitting, 'bg-indigo-300' : isAlreadyApplied }"
+                :disabled="isSubmitting||isAlreadyApplied"
+                class="mb-4 text-white flex justify-center w-full rounded p-3 mt-4">
+                <span v-if="!isAlreadyApplied">Submit
+                    Application</span>
+                    <span v-else>Already Applied</span>
+            </button>
+
         </form>
 
     </div>
@@ -43,6 +48,7 @@
 import axios from 'axios'
 import { mapGetters } from 'vuex';
 import InputField from '@/components/InputField.vue'
+import { ref } from 'vue';
 
 export default {
     name: 'JobApplication',
@@ -59,9 +65,12 @@ export default {
                 errors: []
             },
             isSubmitting: false,
-            cv:null
+            cv: null,
+            isAlreadyApplied: false,
+            jobId: null,
         }
     },
+  
     props: {
         category_slug: {
             type: String,
@@ -77,7 +86,12 @@ export default {
     },
     mounted() {
         this.setInitialName();
-        this.getJobDetails()
+        
+        if (this.isAuthenticated) {
+            this.getJobDetails().then(() => {
+                this.checkApplication();
+            });
+    } 
     },
     computed: {
         ...mapGetters(['currentUser']),
@@ -112,6 +126,7 @@ export default {
                 .then(response => {
                     this.job = response.data
                     document.title = this.job.title + ' | Djobs'
+                    this.jobId = this.job.id;
                     
                 })
                 .catch(error => {
@@ -164,6 +179,25 @@ export default {
 
 
         },
+        async checkApplication() {
+            const job_id = this.jobId; 
+            const user_id = `${this.currentUser.id}`;
+            await axios.get(`/api/v1/applications/check/${user_id}/${job_id}/`)
+                .then(response => {
+                    if (response.data.applied) {
+                        // User has already applied for the job
+                        // Modify Apply button accordingly
+                        this.isAlreadyApplied = true;
+                    } else {
+                        // User has not applied for the job
+                        // Modify Apply button accordingly
+                        this.isAlreadyApplied = false;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error checking application status:', error);
+                });
+        }
 
 
     }

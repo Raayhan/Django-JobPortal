@@ -45,8 +45,10 @@
 
         </div>
         <div class="flex justify-center mt-6">
-            <router-link :to="job.get_absolute_url+`apply`"
+            <router-link v-if="!isAlreadyApplied" :to="job.get_absolute_url+`apply`"
                 class="bg-green-800 text-white text-center w-40 py-2 rounded hover:bg-green-900">Apply Now</router-link>
+            <span v-else class="bg-green-800 opacity-50 text-white text-center w-40 py-2 rounded"> 
+                Already Applied</span>
         </div>
 
 
@@ -63,10 +65,17 @@ export default {
     data() {
         return {
             job: {},
+            isAlreadyApplied: false,
+            jobId: null,
         }
     },
     mounted() {
-        this.getJobDetails()
+        this.getJobDetails().then(() => {
+            if (this.isAuthenticated) {
+                this.checkApplication()
+            }  
+        });
+        
     },
     methods: {
         async getJobDetails() {
@@ -79,12 +88,33 @@ export default {
                 .then(response => {
                     this.job = response.data
                     document.title = this.job.title + ' | Djobs'
-                    console.log(this.job.id)
+                    this.jobId = this.job.id;
+                    
                 })
                 .catch(error => {
                     console.log(error)
                 })
             this.$store.commit('setIsLoading', false)
+        },
+        async checkApplication() {
+            const job_id = this.jobId;
+            const user_id = `${this.currentUser.id}`;
+           
+            await axios.get(`/api/v1/applications/check/${user_id}/${job_id}/`)
+                .then(response => {
+                    if (response.data.applied) {
+                        // User has already applied for the job
+                        // Modify Apply button accordingly
+                        this.isAlreadyApplied = true;
+                    } else {
+                        // User has not applied for the job
+                        // Modify Apply button accordingly
+                        this.isAlreadyApplied = false;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error checking application status:', error);
+                });
         },
         
         formatDate(date) {
