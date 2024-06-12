@@ -36,7 +36,13 @@
                 class="mb-4 text-white flex justify-center w-full rounded p-3 mt-4">
                 <span v-if="!isAlreadyApplied">Submit
                     Application</span>
-                    <span v-else>Already Applied</span>
+                <span class="flex items-center" v-else>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-5 mr-0.5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    Already Applied</span>
             </button>
 
         </form>

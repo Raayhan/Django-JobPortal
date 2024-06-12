@@ -1033,3 +1033,4 @@ WARNING 2024-06-12 16:26:55,289 log Not Found: /api/v1/applications/check/1/null
 WARNING 2024-06-12 16:27:07,022 log Not Found: /api/v1/applications/check/1/null/
 WARNING 2024-06-12 16:27:42,853 log Not Found: /api/v1/applications/check/1/null/
 WARNING 2024-06-12 16:28:08,943 log Not Found: /api/v1/applications/check/1/null/
+WARNING 2024-06-12 16:41:47,585 log Bad Request: /api/v1/jobs/fullstack/software-engineer-full-stack/apply

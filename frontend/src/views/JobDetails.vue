@@ -47,8 +47,12 @@
         <div class="flex justify-center mt-6">
             <router-link v-if="!isAlreadyApplied" :to="job.get_absolute_url+`apply`"
                 class="bg-green-800 text-white text-center w-40 py-2 rounded hover:bg-green-900">Apply Now</router-link>
-            <span v-else class="bg-green-800 opacity-50 text-white text-center w-40 py-2 rounded"> 
-                Already Applied</span>
+            <span v-else class="flex bg-green-800 opacity-50 justify-center text-white text-center w-40 py-2 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5 mr-0.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg> Already Applied</span>
         </div>
 
 
