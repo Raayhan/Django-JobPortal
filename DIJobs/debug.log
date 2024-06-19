@@ -1103,3 +1103,8 @@ INFO 2024-06-12 23:17:03,684 autoreload /home/rayhan/DI Software Projects/JobPor
 INFO 2024-06-12 23:17:04,048 autoreload Watching for file changes with StatReloader
 INFO 2024-06-12 23:17:06,238 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/serializers.py changed, reloading.
 INFO 2024-06-12 23:17:06,652 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 10:50:36,104 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 10:51:21,705 autoreload Watching for file changes with StatReloader
+INFO 2024-06-19 13:46:45,144 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-19 13:47:12,652 log Not Found: /favicon.ico
+WARNING 2024-06-19 14:00:40,060 log Not Found: /favicon.ico

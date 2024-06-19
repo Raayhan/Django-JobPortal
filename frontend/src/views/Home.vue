@@ -1,5 +1,5 @@
 <template>
- 
+
   <div class="grid grid-cols-1 md:grid-cols-3 mx-4 mt-6">
     <JobBox v-for="job in latestJobs" v-bind:key="job.id" v-bind:job="job"></JobBox>
   </div>
@@ -9,6 +9,7 @@
 <script>
 import axios from 'axios'
 import JobBox from '@/components/JobBox.vue'
+import Loading from '@/components/Loading.vue'
 
 export default {
   name: 'Home',
@@ -18,7 +19,8 @@ export default {
     }
   },
   components: {
-    JobBox
+    JobBox,
+    Loading
   },
   mounted() {
     this.getLatestJobs()
@@ -26,7 +28,7 @@ export default {
   },
   methods: {
     async getLatestJobs() {
-      this.$store.commit('setIsLoading', true)
+      //this.$store.commit('setIsLoading', true)
       await axios
         .get('api/v1/latest-jobs')
         .then(response => { this.latestJobs = response.data })
@@ -34,7 +36,7 @@ export default {
           console.log(error)
           
         })
-      this.$store.commit('setIsLoading', false)
+     // this.$store.commit('setIsLoading', false)
       //console.table(this.latestJobs)
     }
   }

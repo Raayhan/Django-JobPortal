@@ -53,7 +53,7 @@
               {{ formatDate(application.job.deadline) }}
             </td>
             <td class="">
-              <button class="text-red-700 font-bold underline">Withdraw</button>
+              <button class="text-red-700 hover:font-bold">Withdraw</button>
             </td>
           </tr>
 
