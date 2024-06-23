@@ -77,7 +77,7 @@
           <input id="id" type="hidden" v-model="form.id" />
           <button type="submit" :class="{ 'bg-red-500 animate-pulse': isSubmitting, 'bg-red-700': !isSubmitting }"
             :disabled="isSubmitting" class="px-2 py-1 font-medium w-20 rounded-l mr-1 text-white hover:bg-red-800"
-            @click="showModal = false">
+            >
             Confirm
           </button>
         </form>
@@ -160,39 +160,25 @@ export default {
        
     },
 
-    async handleSubmit() {
-      //console.table(this.form);
-      this.form.errors = []
-
-      if (!this.form.errors.length) {
-        this.showModalFlag = false;
-        this.isSubmitting = true;
-        const formData = new FormData();
-        formData.append('id', this.form.id);
-        console.log('Form Data:', this.form);
-        try {
-          //console.table(form)
-          const response = await axios.post("/api/v1/applications/withdraw", form);
-          this.$router.push('/applications')
-
-        } catch (error) {
-          if (error.response) {
-            for (const property in error.response.data) {
-
-              const errors = error.response.data[property];
-              if (Array.isArray(errors)) {
-                errors.forEach(err => this.form.errors.push(err));
-              } else {
-                this.form.errors.push(errors);
-              }
-            }
-          } else {
-            this.form.errors.push('Something went wrong. Please try again later.');
-            console.log(JSON.stringify(error));
+    handleSubmit() {
+      this.isSubmitting = true;
+      const token = localStorage.getItem('token');
+      try {
+        // Send DELETE request to delete the application
+        axios.delete(`api/v1/applications/withdraw/${this.form.id}`, {
+          headers: {
+           
+            "Authorization": `Token ${token}`
           }
-        } finally {
-          this.isSubmitting = false;
-        }
+        });
+
+        this.applications = this.applications.filter(app => app.id !== this.form.id);
+        this.showModalFlag = false;
+        //this.$router.push('/applications');
+      } catch (error) {
+        this.form.errors = error.response ? error.response.data.errors : ['An error occurred'];
+      } finally {
+        this.isSubmitting = false;
       }
     },
 

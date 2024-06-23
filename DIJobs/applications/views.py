@@ -6,7 +6,10 @@ from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.models import User
 from .models import Application, Job
 from .serializers import ApplicationSerializer
+import os
+import logging
 
+logger = logging.getLogger(__name__)
 class SubmitApplication(APIView):
     permission_classes = [IsAuthenticated]
     parser_classes = [MultiPartParser, FormParser]
@@ -55,3 +58,22 @@ class UserApplicationsView(APIView):
         serializer = ApplicationSerializer(applications, many=True)
         
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+class WithdrawApplication(APIView):
+    
+    permission_classes = [IsAuthenticated]
+    
+    def delete(self, request, id, format=None):
+        
+        try:
+            application = Application.objects.get(id=id)
+            if application.candidate != request.user:
+                return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+            if application.cv:
+                cv_path = application.cv.path
+                if os.path.exists(cv_path):
+                    os.remove(cv_path)
+            application.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        except Application.DoesNotExist:
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
