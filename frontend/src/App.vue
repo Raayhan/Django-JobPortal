@@ -31,7 +31,8 @@
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex text-white text-xl tracking-widest flex-shrink-0 items-center font-bold">
-           DJobs
+            <router-link to="/">DJobs</router-link>
+           
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
@@ -85,8 +86,8 @@
                 role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                 <ul>
-                  <li class="hover:bg-indigo-100"><a href="#" class="block px-4 py-2 text-sm text-gray-700"
-                      role="menuitem" tabindex="-1" id="user-menu-item-0">Profile</a></li>
+                  <li class="hover:bg-indigo-100"><router-link @click="isOpen = false" to="/profile" class="block px-4 py-2 text-sm text-gray-700"
+                      role="menuitem" tabindex="-1" id="user-menu-item-0">Account</router-link></li>
                   <li class="hover:bg-indigo-100"> <button @click="logout()"
                       class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                       id="user-menu-item-2">Sign out</button></li>
@@ -139,12 +140,13 @@ export default {
   methods: {
     logout() {
 
+      this.isOpen = false
       axios.defaults.headers.common["Authorization"] = ""
 
       localStorage.removeItem("token")
       localStorage.removeItem("username")
       localStorage.removeItem("userid")
-      this.isOpen = false
+      
       this.$store.commit('removeToken')
       this.$router.push('/sign-in')
 

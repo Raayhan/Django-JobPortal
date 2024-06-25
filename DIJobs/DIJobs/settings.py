@@ -53,6 +53,8 @@ REST_FRAMEWORK = {
 DJOSER = {
     'SERIALIZERS': {
         'user_create': 'DIJobs.serializers.CustomUserCreateSerializer',
+        'user_update': 'DIJobs.serializers.CustomUserUpdateSerializer',
+        'user': 'DIJobs.serializers.UserSerializer',
     }
 }
 

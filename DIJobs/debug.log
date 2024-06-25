@@ -1292,3 +1292,446 @@ INFO 2024-06-23 16:13:40,881 autoreload /home/rayhan/DI Software Projects/JobPor
 INFO 2024-06-23 16:13:41,111 autoreload Watching for file changes with StatReloader
 INFO 2024-06-23 16:13:44,331 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/applications/views.py changed, reloading.
 INFO 2024-06-23 16:13:44,567 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 11:03:11,563 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 11:03:23,293 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-24 11:08:25,869 log Internal Server Error: /api/v1/jobs/profile/
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 30, in get
+    category = self.get_object(category_slug)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 25, in get_object
+    return Category.objects.get(slug=category_slug)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+jobs.models.Category.DoesNotExist: Category matching query does not exist.
+ERROR 2024-06-24 11:09:05,113 log Internal Server Error: /api/v1/jobs/profile/
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 30, in get
+    category = self.get_object(category_slug)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 25, in get_object
+    return Category.objects.get(slug=category_slug)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+jobs.models.Category.DoesNotExist: Category matching query does not exist.
+ERROR 2024-06-24 11:09:05,137 log Internal Server Error: /api/v1/jobs/profile/
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 30, in get
+    category = self.get_object(category_slug)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 25, in get_object
+    return Category.objects.get(slug=category_slug)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+jobs.models.Category.DoesNotExist: Category matching query does not exist.
+ERROR 2024-06-24 11:09:05,164 log Internal Server Error: /api/v1/jobs/profile/
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 30, in get
+    category = self.get_object(category_slug)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 25, in get_object
+    return Category.objects.get(slug=category_slug)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+jobs.models.Category.DoesNotExist: Category matching query does not exist.
+ERROR 2024-06-24 11:09:12,257 log Internal Server Error: /api/v1/jobs/profile/
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 30, in get
+    category = self.get_object(category_slug)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 25, in get_object
+    return Category.objects.get(slug=category_slug)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+jobs.models.Category.DoesNotExist: Category matching query does not exist.
+ERROR 2024-06-24 11:09:17,220 log Internal Server Error: /api/v1/jobs/profile/
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 30, in get
+    category = self.get_object(category_slug)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 25, in get_object
+    return Category.objects.get(slug=category_slug)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+jobs.models.Category.DoesNotExist: Category matching query does not exist.
+ERROR 2024-06-24 11:09:21,930 log Internal Server Error: /api/v1/jobs/profile/
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 30, in get
+    category = self.get_object(category_slug)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 25, in get_object
+    return Category.objects.get(slug=category_slug)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+jobs.models.Category.DoesNotExist: Category matching query does not exist.
+ERROR 2024-06-24 11:10:05,272 log Internal Server Error: /api/v1/jobs/profile/
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 30, in get
+    category = self.get_object(category_slug)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/jobs/views.py", line 25, in get_object
+    return Category.objects.get(slug=category_slug)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+jobs.models.Category.DoesNotExist: Category matching query does not exist.
+WARNING 2024-06-24 12:18:12,736 log Not Found: /favicon.ico
+WARNING 2024-06-24 15:02:44,879 log Method Not Allowed: /api/v1/user/
+ERROR 2024-06-24 15:03:04,933 log Internal Server Error: /api/v1/users/me
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/api/v1/users/me/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2024-06-24 15:04:14,711 log Not Found: /api/v1/auth/users/me/
+WARNING 2024-06-24 15:34:41,376 log Method Not Allowed: /api/v1/users/me/
+INFO 2024-06-24 15:41:02,341 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-24 15:41:02,639 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 15:41:03,855 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-24 15:41:04,107 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 15:48:33,437 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-24 15:48:33,687 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 15:48:37,923 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-24 15:48:38,163 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 15:48:40,378 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-24 15:48:40,642 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 15:53:27,538 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/settings.py changed, reloading.
+INFO 2024-06-24 15:53:27,801 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 15:53:33,020 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/settings.py changed, reloading.
+INFO 2024-06-24 15:53:33,268 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 16:11:04,134 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-24 16:11:04,383 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 16:11:06,597 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-24 16:11:06,838 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 16:11:10,062 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-24 16:11:10,298 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 16:11:17,562 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-24 16:11:17,799 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 17:16:00,605 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-24 17:16:00,849 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 17:16:21,233 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-24 17:16:21,551 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 17:16:37,894 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-24 17:16:38,144 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 17:17:09,693 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-24 17:17:09,952 autoreload Watching for file changes with StatReloader
+INFO 2024-06-24 17:18:23,881 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-24 17:18:24,201 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-24 17:19:19,566 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-24 17:19:19,741 log Not Found: /favicon.ico
+WARNING 2024-06-24 17:19:28,992 log Unauthorized: /api/v1/users/me/
+ERROR 2024-06-24 17:20:36,619 log Internal Server Error: /api/v1/users/me
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/api/v1/users/me/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2024-06-24 17:20:59,512 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-24 17:22:36,509 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-24 17:23:10,849 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-24 17:23:12,025 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-24 17:23:12,832 log Unauthorized: /api/v1/users/me/
+INFO 2024-06-25 11:21:42,978 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:46:15,791 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 11:46:16,040 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:46:32,390 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 11:46:32,720 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:46:45,033 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 11:46:45,283 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:46:57,593 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 11:46:57,836 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:46:59,954 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 11:47:00,181 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:48:40,363 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 11:48:40,615 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:48:47,872 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 11:48:48,120 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:49:15,621 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 11:49:15,856 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:53:15,274 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 11:53:15,506 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:53:17,672 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 11:53:17,904 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 11:55:10,498 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 12:10:05,874 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 12:10:06,143 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 12:10:09,375 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 12:10:09,623 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 12:10:32,570 views Received GET request to update user profile
+INFO 2024-06-25 12:10:32,577 views Received GET request to update user profile
+INFO 2024-06-25 12:10:32,588 views Received GET request to update user profile
+INFO 2024-06-25 12:10:32,639 views Received GET request to update user profile
+INFO 2024-06-25 12:10:32,644 views Received GET request to update user profile
+INFO 2024-06-25 12:10:32,692 views Received GET request to update user profile
+INFO 2024-06-25 12:10:32,696 views Received GET request to update user profile
+INFO 2024-06-25 12:10:32,742 views Received GET request to update user profile
+INFO 2024-06-25 12:10:32,746 views Received GET request to update user profile
+INFO 2024-06-25 12:10:58,302 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 12:10:58,536 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 12:11:42,137 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 12:11:42,410 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 12:15:55,008 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-25 12:15:55,248 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 12:16:28,792 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-25 12:16:29,064 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-25 12:30:11,873 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:53:55,200 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:54:10,057 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:54:16,577 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:54:35,819 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:54:37,003 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:54:37,829 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:54:58,698 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:55:03,716 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:55:34,038 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:55:46,789 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:56:00,891 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 12:56:02,012 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 13:01:09,724 log Unauthorized: /api/v1/users/me/
+WARNING 2024-06-25 13:01:13,807 log Unauthorized: /api/v1/users/me/
+INFO 2024-06-25 13:20:40,562 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-25 13:20:40,797 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 13:21:03,145 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-25 13:21:03,376 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 13:21:51,958 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-25 13:21:52,199 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 13:21:58,376 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-25 13:21:58,616 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 13:22:19,910 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/settings.py changed, reloading.
+INFO 2024-06-25 13:22:20,148 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 13:22:26,359 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/settings.py changed, reloading.
+INFO 2024-06-25 13:22:26,600 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 13:22:30,794 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/settings.py changed, reloading.
+INFO 2024-06-25 13:22:31,034 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 13:51:05,352 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-25 13:51:05,600 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 13:51:10,801 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-25 13:51:11,032 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 13:51:18,238 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-25 13:51:18,469 autoreload Watching for file changes with StatReloader
+INFO 2024-06-25 13:51:42,820 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-25 13:51:43,055 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-25 14:21:20,749 log Bad Request: /api/v1/token/login

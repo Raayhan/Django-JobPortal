@@ -65,7 +65,7 @@
 import axios from 'axios'
 import { mapGetters } from 'vuex';
 import InputField from '@/components/InputField.vue'
-import { ref } from 'vue';
+
 
 export default {
     name: 'JobApplication',

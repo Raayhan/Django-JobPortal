@@ -6,6 +6,7 @@ import SignUp from '@/views/auth/SignUp.vue'
 import Category from '@/views/Category.vue'
 import JobDetails from '@/views/JobDetails.vue'
 import JobApplication from '@/views/JobApplication.vue'
+import Profile from '@/views/Profile.vue'
 import store from '../store'
 
 const routes = [
@@ -52,7 +53,16 @@ const routes = [
     meta: {
       requireLogin:true
     }
- }
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile,
+    props: true,
+    meta: {
+      requireLogin:true
+    }
+  },
 ]
 
 const router = createRouter({

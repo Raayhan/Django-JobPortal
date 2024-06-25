@@ -32,7 +32,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="application in applications" v-bind:key="application.id" v-bind:application="application"
+          <tr v-if="applications.length === 0">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="py-6">
+              No Applications Found
+            </td>
+
+          </tr>
+          <tr v-else v-for="application in applications" v-bind:key="application.id" v-bind:application="application"
             class="bg-white border-b">
             <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap">
               <router-link class="text-indigo-800 hover:underline" :to="application.job.get_absolute_url"> {{
@@ -55,7 +64,7 @@
             </td>
             <td class="">
               <button type="button" @click="showModal(application)"
-                class="text-red-700 hover:font-bold">Withdraw</button>
+                class="bg-red-700 text-white px-2 py-1 text-xs rounded hover:bg-red-800">Withdraw</button>
             </td>
           </tr>
 
@@ -76,8 +85,7 @@
 
           <input id="id" type="hidden" v-model="form.id" />
           <button type="submit" :class="{ 'bg-red-500 animate-pulse': isSubmitting, 'bg-red-700': !isSubmitting }"
-            :disabled="isSubmitting" class="px-2 py-1 font-medium w-20 rounded-l mr-1 text-white hover:bg-red-800"
-            >
+            :disabled="isSubmitting" class="px-2 py-1 font-medium w-20 rounded-l mr-1 text-white hover:bg-red-800">
             Confirm
           </button>
         </form>
@@ -107,10 +115,10 @@ export default {
     return {
       applications:[],
       statuses: {
-        '0': { class: 'text-xs text-violet-700 bg-violet-100 tracking-wider capitalized rounded py-1 px-2', text: 'Application Received' },
-        '1': { class: 'text-xs text-yellow-700 bg-yellow-100 capitalized tracking-wider rounded py-1 px-2', text: 'Under Consideration' },
-        '2': { class: 'text-xs text-green-700 bg-green-100 capitalized tracking-wider rounded py-1 px-2', text: 'Accepted' },
-        '3': { class: 'text-xs text-red-700 bg-red-100 capitalized tracking-wider rounded py-1 px-2', text: 'Rejected' },
+        '0': { class: 'text-xs text-violet-700 bg-violet-100 font-bold tracking-wide capitalized rounded py-1 px-2', text: 'Application Received' },
+        '1': { class: 'text-xs text-yellow-700 bg-yellow-100 font-bold capitalized tracking-wide rounded py-1 px-2', text: 'Under Consideration' },
+        '2': { class: 'text-xs text-green-700 bg-green-100 font-bold capitalized tracking-wide rounded py-1 px-2', text: 'Accepted' },
+        '3': { class: 'text-xs text-red-700 bg-red-100 font-bold capitalized tracking-wide rounded py-1 px-2', text: 'Rejected' },
 
       },
       activeApplication: null,
