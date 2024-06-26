@@ -1735,3 +1735,142 @@ INFO 2024-06-25 13:51:18,469 autoreload Watching for file changes with StatReloa
 INFO 2024-06-25 13:51:42,820 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
 INFO 2024-06-25 13:51:43,055 autoreload Watching for file changes with StatReloader
 WARNING 2024-06-25 14:21:20,749 log Bad Request: /api/v1/token/login
+INFO 2024-06-26 12:03:56,438 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:28:10,091 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:28:10,328 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:28:39,781 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:28:40,060 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:29:31,739 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/settings.py changed, reloading.
+INFO 2024-06-26 13:29:31,978 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:29:34,195 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/settings.py changed, reloading.
+INFO 2024-06-26 13:29:34,433 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:30:07,937 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:30:08,189 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:30:11,317 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:30:11,545 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:30:13,666 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:30:13,894 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:30:15,006 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:30:15,249 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:30:21,404 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:30:21,649 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:30:23,772 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:30:24,004 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:30:29,252 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:30:29,502 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:30:40,802 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/urls.py changed, reloading.
+INFO 2024-06-26 13:30:41,036 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:30:48,292 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/urls.py changed, reloading.
+INFO 2024-06-26 13:30:48,541 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:30:53,785 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/urls.py changed, reloading.
+INFO 2024-06-26 13:30:54,039 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:31:03,245 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/urls.py changed, reloading.
+INFO 2024-06-26 13:31:03,484 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:32:07,140 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:32:07,389 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:32:09,508 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:32:09,732 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:32:15,905 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:32:16,142 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:32:40,464 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/urls.py changed, reloading.
+INFO 2024-06-26 13:32:40,694 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:32:42,817 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/urls.py changed, reloading.
+INFO 2024-06-26 13:32:43,039 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:33:57,597 views Received PUT request to update user profile
+DEBUG 2024-06-26 13:33:57,597 views Request data: <QueryDict: {'first_name': ['Rakib'], 'last_name': ['Rayhan']}>
+ERROR 2024-06-26 13:33:57,623 log Internal Server Error: /api/v1/user/update
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py", line 36, in patch
+    serializer = CustomUserUpdateSerializer(request.user, data=request.data, partial=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'CustomUserUpdateSerializer' is not defined
+INFO 2024-06-26 13:34:57,547 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 13:34:57,807 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:35:05,532 views Received PUT request to update user profile
+DEBUG 2024-06-26 13:35:05,533 views Request data: <QueryDict: {'first_name': ['Rakib'], 'last_name': ['Rayhan']}>
+ERROR 2024-06-26 13:35:05,553 log Internal Server Error: /api/v1/user/update
+Traceback (most recent call last):
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/rayhan/DI Software Projects/JobPortal/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py", line 37, in patch
+    serializer = CustomUserUpdateSerializer(request.user, data=request.data, partial=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CustomUserUpdateSerializer() takes no arguments
+INFO 2024-06-26 13:35:23,287 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/serializers.py changed, reloading.
+INFO 2024-06-26 13:35:23,548 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:35:28,492 views Received PUT request to update user profile
+DEBUG 2024-06-26 13:35:28,492 views Request data: <QueryDict: {'first_name': ['Rakib'], 'last_name': ['Rayhan']}>
+INFO 2024-06-26 13:35:28,493 views Serializer is valid, saving user profile
+DEBUG 2024-06-26 13:35:28,500 views Updated user data: {'first_name': 'Rakib', 'last_name': 'Rayhan'}
+INFO 2024-06-26 13:41:59,429 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/urls.py changed, reloading.
+INFO 2024-06-26 13:41:59,667 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:44:33,138 views Received PUT request to update user profile
+DEBUG 2024-06-26 13:44:33,139 views Request data: <QueryDict: {'first_name': ['Ahmed'], 'email': ['RRakib@democracyinternational.com']}>
+INFO 2024-06-26 13:44:33,140 views Serializer is valid, saving user profile
+DEBUG 2024-06-26 13:44:33,141 views Updated user data: {'first_name': 'Ahmed', 'last_name': 'Rayhan'}
+INFO 2024-06-26 13:46:56,419 views Received PUT request to update user profile
+DEBUG 2024-06-26 13:46:56,419 views Request data: <QueryDict: {'first_name': ['Rakib'], 'last_name': ['Rayhan'], 'email': ['RRakib@democracyinternational.com']}>
+INFO 2024-06-26 13:46:56,420 views Serializer is valid, saving user profile
+DEBUG 2024-06-26 13:46:56,421 views Updated user data: {'first_name': 'Rakib', 'last_name': 'Rayhan'}
+INFO 2024-06-26 14:07:21,234 views Received PUT request to update user profile
+DEBUG 2024-06-26 14:07:21,234 views Request data: <QueryDict: {'first_name': ['Rakib'], 'last_name': ['Rayhan'], 'email': ['RRakib@democracyinternational.com']}>
+INFO 2024-06-26 14:07:21,234 views Serializer is valid, saving user profile
+DEBUG 2024-06-26 14:07:21,235 views Updated user data: {'first_name': 'Rakib', 'last_name': 'Rayhan'}
+INFO 2024-06-26 14:26:22,144 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 14:26:22,424 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:26:24,647 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 14:26:24,885 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:26:27,094 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 14:26:27,332 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:26:29,541 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 14:26:29,792 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:26:31,003 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 14:26:31,262 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:26:33,476 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 14:26:33,716 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:26:35,932 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 14:26:36,173 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:26:45,448 autoreload /home/rayhan/DI Software Projects/JobPortal/DIJobs/DIJobs/views.py changed, reloading.
+INFO 2024-06-26 14:26:45,679 autoreload Watching for file changes with StatReloader

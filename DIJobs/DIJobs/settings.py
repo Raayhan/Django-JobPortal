@@ -54,7 +54,7 @@ DJOSER = {
     'SERIALIZERS': {
         'user_create': 'DIJobs.serializers.CustomUserCreateSerializer',
         'user_update': 'DIJobs.serializers.CustomUserUpdateSerializer',
-        'user': 'DIJobs.serializers.UserSerializer',
+        'user'       : 'DIJobs.serializers.UserSerializer',
     }
 }
 
